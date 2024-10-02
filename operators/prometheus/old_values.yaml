@@ -5,7 +5,6 @@
 
 rbac:
   create: true
-  createClusterRole: true
 
 podSecurityPolicy:
   enabled: false
@@ -1303,8 +1302,3 @@ prometheus-pushgateway:
   # Optional service annotations
   serviceAnnotations:
     prometheus.io/probe: pushgateway
-
-prometheus:
-  prometheusSpec:
-    serviceMonitorSelector: {}  # Allow monitoring of all ServiceMonitors
-    serviceMonitorNamespaceSelector: {}  # Allow ServiceMonitors from all namespaces
