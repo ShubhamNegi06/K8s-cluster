@@ -13,6 +13,7 @@ spec:
       labels:
         app: kubernetes-dashboard
     spec:
+      serviceAccountName: dashboard-admin
       containers:
         - name: kubernetes-dashboard
           image: kubernetesui/dashboard:v2.7.0
