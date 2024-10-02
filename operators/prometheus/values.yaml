@@ -705,7 +705,7 @@ server:
 
     annotations: {}
     labels: {}
-    clusterIP: ""
+    NodePort: ""
 
     ## List of IP addresses at which the Prometheus server service is available
     ## Ref: https://kubernetes.io/docs/concepts/services-networking/service/#external-ips
@@ -716,7 +716,7 @@ server:
     loadBalancerSourceRanges: []
     servicePort: 80
     sessionAffinity: None
-    type: ClusterIP
+    type: NodePort
 
     ## Enable gRPC port on service to allow auto discovery with thanos-querier
     gRPC:
