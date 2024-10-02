@@ -18,9 +18,10 @@ spec:
           image: kubernetesui/dashboard-metrics-scraper:latest
           ports:
             - containerPort: 8000
-          Limits:
-            cpu:     250m
-            memory:  400Mi
-          Requests:
-            cpu:     100m
-            memory:  200Mi
+          resources:              # Correctly nest limits and requests here
+            limits:
+              cpu:     250m
+              memory:  400Mi
+            requests:
+              cpu:     100m
+              memory:  200Mi
