@@ -1209,9 +1209,9 @@ serverFiles:
 # must be a string so you have to add a | after extraScrapeConfigs:
 # example adds prometheus-blackbox-exporter scrape config
 extraScrapeConfigs: |
-    - job_name: 'jenkins'
-      static_configs:
-       - targets: ['10.0.1.8:8080/prometheus']
+  - job_name: 'jenkins'
+    static_configs:
+      - targets: ['10.0.1.8:8080/prometheus']
   # - job_name: 'prometheus-blackbox-exporter'
   #   metrics_path: /probe
   #   params:
@@ -1229,7 +1229,7 @@ extraScrapeConfigs: |
 
 # Adds option to add alert_relabel_configs to avoid duplicate alerts in alertmanager
 # useful in H/A prometheus with different external labels but the same alerts
-alertRelabelConfigs: {}
+alertRelabelConfigs: |
   # alert_relabel_configs:
   # - source_labels: [dc]
   #   regex: (.+)\d+
@@ -1237,7 +1237,6 @@ alertRelabelConfigs: {}
 
 networkPolicy:
   ## Enable creation of NetworkPolicy resources.
-  ##
   enabled: false
 
 # Force namespace of namespaced resources
