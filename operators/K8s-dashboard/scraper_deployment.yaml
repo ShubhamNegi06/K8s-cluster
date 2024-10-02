@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: dashboard-metrics-scraper
-          image: kubernetesui/metrics-scraper:latest
+          image: kubernetesui/dashboard-metrics-scraper:latest
           ports:
             - containerPort: 8000
