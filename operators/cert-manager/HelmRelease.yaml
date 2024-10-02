@@ -1,0 +1,16 @@
+apiVersion: fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  releaseName: cert-manager
+  chart:
+    repository: https://charts.jetstack.io
+    name: cert-manager
+    version: v1.9.0  # Specify the version you want to install
+  valuesFrom:
+    - kind: ConfigMap
+      name: cert-manager-values
+      namespace: <your-namespace>
+      valuesKey: values.yaml  # This should match your values.yaml file name

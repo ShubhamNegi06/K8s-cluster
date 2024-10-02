@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cert-manager-values
+  namespace: <your-namespace>
+data:
+  values.yaml: |
+    global:
+      namespace: cert-manager
+    installCRDs: true
+    extraArgs:
+      - --v
+      - "2"
+      - --feature-gates
+      - "CertificateRequestController=true"
+    serviceAccount:
+      create: true

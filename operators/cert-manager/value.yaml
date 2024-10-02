@@ -1,0 +1,13 @@
+global:
+  namespace: cert-manager
+
+installCRDs: true
+
+extraArgs:
+  - --v
+  - "2"
+  - --feature-gates
+  - "CertificateRequestController=true"
+
+serviceAccount:
+  create: true
