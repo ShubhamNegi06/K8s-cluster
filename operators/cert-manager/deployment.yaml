@@ -12,10 +12,7 @@ items:
       app: cert-manager
       app.kubernetes.io/component: controller
       app.kubernetes.io/instance: cert-manager
-      app.kubernetes.io/managed-by: Helm
       app.kubernetes.io/name: cert-manager
-      app.kubernetes.io/version: v1.15.3
-      helm.sh/chart: cert-manager-v1.15.3
     name: cert-manager
     namespace: cert-manager
   spec:
@@ -42,10 +39,7 @@ items:
           app: cert-manager
           app.kubernetes.io/component: controller
           app.kubernetes.io/instance: cert-manager
-          app.kubernetes.io/managed-by: Helm
           app.kubernetes.io/name: cert-manager
-          app.kubernetes.io/version: v1.15.3
-          helm.sh/chart: cert-manager-v1.15.3
       spec:
         containers:
         - args:
@@ -121,10 +115,7 @@ items:
       app: cainjector
       app.kubernetes.io/component: cainjector
       app.kubernetes.io/instance: cert-manager
-      app.kubernetes.io/managed-by: Helm
       app.kubernetes.io/name: cainjector
-      app.kubernetes.io/version: v1.15.3
-      helm.sh/chart: cert-manager-v1.15.3
     name: cert-manager-cainjector
     namespace: cert-manager
   spec:
