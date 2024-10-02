@@ -1208,7 +1208,10 @@ serverFiles:
 # adds additional scrape configs to prometheus.yml
 # must be a string so you have to add a | after extraScrapeConfigs:
 # example adds prometheus-blackbox-exporter scrape config
-extraScrapeConfigs: ""
+extraScrapeConfigs: |
+    - job_name: 'jenkins'
+      static_configs:
+       - targets: ['10.0.1.8:8080/prometheus']
   # - job_name: 'prometheus-blackbox-exporter'
   #   metrics_path: /probe
   #   params:
